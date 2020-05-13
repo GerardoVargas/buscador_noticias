@@ -1,7 +1,12 @@
 import React from 'react';
 import styles from './Formulario.module.css'
 
+import useSelect from '../hooks/useSelect'
+
 const Formulario = () => {
+
+    const [categoria, SelectNoticias] = useSelect()
+
     return ( 
         <div className="container white">
             <div className={`${styles.buscador} row`}>
@@ -9,6 +14,7 @@ const Formulario = () => {
                     <form>
                         <h2 className={styles.heading}>Encuentra noticias por categoria</h2>
                         <div className="input-field col s12">
+                            <SelectNoticias/>
                             <input 
                                 type="submit"
                                 className={`${styles['btn-block']} btn-large amber darken-2`}
