@@ -25,23 +25,21 @@ const Formulario = ({guardarCategoria}) => {
     }
 
     return ( 
-        <div className="container white">
-            <div className={`${styles.buscador} row`}>
-                <div className="col s12 m8 offset-m2">
-                    <form
-                        onSubmit={buscarNoticias}
-                    >
-                        <h2 className={styles.heading}>Encuentra noticias por categoria</h2>
-                        <div className="input-field col s12">
-                            <SelectNoticias/>
-                            <input 
-                                type="submit"
-                                className={`${styles['btn-block']} btn-large amber darken-2`}
-                                value="Buscar"
-                            />
-                        </div>
-                    </form>
-                </div>
+        <div className={`${styles.buscador} row`}>
+            <div className="col s12 m8 offset-m2">
+                <form
+                    onSubmit={buscarNoticias}
+                >
+                    <h2 className={styles.heading}>Encuentra noticias por categoria</h2>
+                    <div className="input-field col s12">
+                        <SelectNoticias/>
+                        <input 
+                            type="submit"
+                            className={`${styles['btn-block']} btn-large amber darken-2`}
+                            value="Buscar"
+                        />
+                    </div>
+                </form>
             </div>
         </div>
      );
