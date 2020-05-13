@@ -5,7 +5,17 @@ import useSelect from '../hooks/useSelect'
 
 const Formulario = () => {
 
-    const [categoria, SelectNoticias] = useSelect()
+    const OPCIONES = [
+        { value: 'general', label:'General'},
+        { value: 'technology', label:'Tecnología'},
+        { value: 'science', label:'Ciencia'},
+        { value: 'health', label:'Salud'},
+        { value: 'business', label:'Negocios'},
+        { value: 'entertainment', label:'Entretenimiento'},
+        { value: 'sports', label:'Deportes'}
+    ]
+
+    const [categoria, SelectNoticias] = useSelect('general', OPCIONES)
 
     return ( 
         <div className="container white">
